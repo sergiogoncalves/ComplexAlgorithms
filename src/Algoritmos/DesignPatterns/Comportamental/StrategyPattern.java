@@ -1,8 +1,13 @@
-package Algoritmos.DesignPatterns;
+package Algoritmos.DesignPatterns.Comportamental;
 
 /*
  * Separates Strategy - how you do something - into a separate class.
  * Allows easy change of strategy at a later point.
+ * 
+ * 
+ * 
+ * Strategy design pattern is one of the behavioral design pattern.
+ *  Strategy pattern is used when we have multiple algorithm for a specific task and client decides the actual implementation to be used at runtime.
  */
 public class StrategyPattern {
 	interface Sortable {

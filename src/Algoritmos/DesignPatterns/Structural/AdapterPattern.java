@@ -1,4 +1,4 @@
-package Algoritmos.DesignPatterns;
+package Algoritmos.DesignPatterns.Structural;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,7 +7,8 @@ import java.util.List;
 import java.util.Map;
 
 /*
- * translates one interface for a class into a compatible interface.[1] An adapter allows classes to work together that normally could not because of incompatible interfaces
+ * translates one interface for a class into a compatible interface.
+ * [1] An adapter allows classes to work together that normally could not because of incompatible interfaces
  */
 public class AdapterPattern {
 	static class CountriesInterface {

@@ -1,7 +1,12 @@
-package Algoritmos.DesignPatterns;
+package Algoritmos.DesignPatterns.Creational;
 
 public class BuilderPattern {
 
+//	Builder pattern was introduced to solve some of the problems with Factory and Abstract Factory design patterns when the Object contains a lot of attributes.
+
+//	There are three major issues with Factory and Abstract Factory design patterns when the Object contains a lot of attributes.
+	
+	
 	static class Coffee {
 		private Coffee(Builder builder) {
 			this.type = builder.type;

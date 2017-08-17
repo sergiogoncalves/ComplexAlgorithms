@@ -1,4 +1,4 @@
-package Algoritmos.DesignPatterns;
+package Algoritmos.DesignPatterns.Comportamental;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +6,12 @@ import java.util.List;
  * You want to know when an event happens
  */
 public class ObserverPattern {
+	
+	// Observer design pattern is useful when you are interested in the state of an 
+	//object and want to get notified whenever there is any change. 
+	//In observer pattern, the object that watch on the state of another object are called Observer
+	//and the object that is being watched is called Subject.
+	
 	static class SachinCenturyNotifier{
 		List<SachinFan> fans = new ArrayList<SachinFan>();
 		void register(SachinFan fan){
