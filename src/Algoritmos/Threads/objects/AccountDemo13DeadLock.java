@@ -1,0 +1,27 @@
+package Algoritmos.Threads.objects;
+
+public class AccountDemo13DeadLock {
+
+	public AccountDemo13DeadLock() {
+		// TODO Auto-generated constructor stub
+	}
+
+    private int balance = 10000;
+
+    public void deposit(int amount) {
+        balance += amount;
+    }
+
+    public void withdraw(int amount) {
+        balance -= amount;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public static void transfer(AccountDemo13DeadLock acc1, AccountDemo13DeadLock acc2, int amount) {
+        acc1.withdraw(amount);
+        acc2.deposit(amount);
+    }
+}

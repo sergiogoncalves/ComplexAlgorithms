@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 import Algoritmos.Threads.objects.Processor;
 
 
-public class Demo07_Threads_Pools {
+public class Demo07_Threads_Pools_Executors {
 
 
 	public static void main(String[] args) {
