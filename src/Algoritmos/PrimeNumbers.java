@@ -17,13 +17,17 @@ public class PrimeNumbers {
 		while (number != 0) {
 			number = scnr.nextInt();
 
-			System.out.printf("Does %d is prime? %s %s %s %n", number, isPrime(number), isPrimeOrNot(number),
-					isPrimeNumber(number));
+			System.out.println(isPrime(number) );
 		}
 	}
 
 	public static boolean isPrime(int number) {
 		int sqrt = (int) Math.sqrt(number) + 1;
+		
+		if(number == 1){
+			return false;
+		}
+		
 		for (int i = 2; i < sqrt; i++) {
 			if (number % i == 0) { // number is perfectly divisible - no prime
 				return false;

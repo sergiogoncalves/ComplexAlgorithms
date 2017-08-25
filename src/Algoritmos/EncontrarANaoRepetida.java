@@ -21,6 +21,7 @@ public class EncontrarANaoRepetida {
 		LinkedHashSet<String> naoRepetidas = new LinkedHashSet();
 		Set<String> utilizadas = new HashSet();
 	
+		
 		for (int i = 0; i < s.length(); i++) {
 			String letra = String.valueOf(s.charAt(i));
 			
