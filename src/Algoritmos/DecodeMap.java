@@ -19,6 +19,9 @@ Decode a Map
 
 import java.util.HashMap;
 import java.util.Map;
+import com.google.common.base.Splitter;
+
+
 
 public class DecodeMap {
 	
@@ -29,11 +32,15 @@ public class DecodeMap {
 		Map<String, String> map = new HashMap<String, String>();
 
 		for (int i = 0; i < tokens.length; i++) {
-			String[] strings = tokens[i].split("=");
 			
-			map.put(strings[0], strings[1].replaceAll("%2C", ","));
+		
+			String[] strings =  tokens[i].split("=");
+			
+			
+			map.put(strings[0] == "" ? "" : strings[0],   strings[1] == "" ? "" : strings[1].replaceAll("%2C", ","));
 		}
 
 		return map;
 	}
+	
 }
