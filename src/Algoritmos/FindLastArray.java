@@ -17,31 +17,18 @@ Sample Input:
 
 public class FindLastArray {
 
-	public static int findLastArray(int[] array01, int[] array02) {
-		int ultimaPosicao = -1;
+	public static int findLastArray(int[] array, int[] subArray) {
+	    int lastPosition = -1;
+	    
 
-		for (int i = 0; i < array01.length - 1; i++) {
+        for (int i = 0; i <= array.length - subArray.length; i++) {
+            for (int j = i; j < i + subArray.length; j++) {
+                if (array[j] != subArray[j - i]) break;
+                if (j == i + subArray.length - 1) lastPosition = i;
+            }
+        }
 
-			if (array01[i] == array02[0]) {
-
-				ultimaPosicao = i;
-
-				for (int j = 0; j < array02.length; j++) {
-					if ((i + j) > array01.length - 1) 
-					{
-						ultimaPosicao = -1;
-					} 
-					else 
-					{
-						if (!(array01[i + j] == array02[j])) {
-							ultimaPosicao = -1;
-						}
-					}
-				}
-			}
-		}
-
-		return ultimaPosicao;
+        return lastPosition;
 
 	}
 

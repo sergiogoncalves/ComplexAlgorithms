@@ -19,28 +19,30 @@ Decode a Map
 
 import java.util.HashMap;
 import java.util.Map;
-import com.google.common.base.Splitter;
-
-
 
 public class DecodeMap {
-	
 
 	public static Map<String, String> decode(String s) {
+		if (s == null)
+			return null;
+
 		String[] tokens = s.split("&");
 
-		Map<String, String> map = new HashMap<String, String>();
+		Map<String, String> map = new HashMap<>();
 
-		for (int i = 0; i < tokens.length; i++) {
-			
-		
-			String[] strings =  tokens[i].split("=");
-			
-			
-			map.put(strings[0] == "" ? "" : strings[0],   strings[1] == "" ? "" : strings[1].replaceAll("%2C", ","));
+		for (String token : tokens) {
+			if (!token.contains("="))
+				throw new IllegalArgumentException();
+
+			String[] strings = token.split("=");
+			if (token.endsWith("=")) {
+				map.put(strings[0], "");
+			} else {
+				map.put(strings[0], strings[1]);
+			}
 		}
 
 		return map;
 	}
-	
+
 }
